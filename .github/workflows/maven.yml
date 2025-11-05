@@ -15,7 +15,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-test:
+  build_test:
 
     runs-on: ubuntu-latest
 
@@ -31,7 +31,7 @@ jobs:
       run: mvn -B test
 
   snyk-scanning:
-    needs: build-test
+    needs: build_test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
